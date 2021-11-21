@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word count</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Poppins:wght@300;400&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 50%;
+            margin: auto;
+            background-color: aqua;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+           
+        }
+        h1{
+            text-align: center;
+            font-family: poppins;
+            margin: 20px;
+        }
+        .count{
+            width: 70%;
+            padding: 10px 5px;
+            margin: 20px;
+            font-family: poppins;
+
+        }
+        .btn{
+            padding: 10px;
+            margin: 25px 0px;
+            font-weight: 600;
+            font-family: poppins;
+            border-radius: 5px;
+            border-style: none;
+        }
+        .result{
+            margin: 10px;
+            font-weight: 500;
+            font-family: poppins;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Enter the word to count the length</h1>
+        <input type="text" class="count" placeholder="Enter Words...">
+        <div class="result"></div>
+        <button class="btn">count words</button>
+    </div>
+
+<script>
+         document.querySelector('.btn').addEventListener('click', ()=>{
+            let words = document.querySelector('.count').value
+            let result = document.querySelector('.result');
+            result = result.innerHTML = `you entered "${words.length}" words`;
+         });
+</script>   
+
+</body>
+</html>
